@@ -1,0 +1,30 @@
+
+{% extends "admin/base.html" %}
+{%load static%}
+
+{% block title %}i2B Admin{% endblock %}
+
+{% block extrastyle %}
+<style>
+#header{
+    background:white;
+    color:black;
+    border-bottom: solid black;
+}
+#user-tools a:any-link{
+    color: darkgreen;
+    font-style: italic;
+}
+</style>
+
+{% endblock %}
+
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img  src="{%static 'images/i2B.png'%}" style="width:100px;"></a></h1>
+{% endblock %}
+
+{% block content_title %}{% if title %}<h1>i2B Private Space</h1>{% endif %}{% endblock %}
+
+
+{% block nav-global %}{% endblock %}

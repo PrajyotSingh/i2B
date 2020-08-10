@@ -1,0 +1,162 @@
+{%extends 'index.html'%}
+{%load static%}
+
+
+{%block content%}
+
+<form method="POST">
+
+    {%csrf_token%}
+
+ 
+
+    {%if user == "influencer"%}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="fname">First Name:</label>
+                <input type="text" class="form-control" placeholder="Enter First Name" id="fname" name="fname" required>
+            </div>
+            <div class="col-lg-6">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" name="lname" required>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
+            </div>
+            <div class="col-lg-6">
+                <label for="mob">Mobile No:</label>
+                <input type="tel" class="form-control" placeholder="Enter Number" id="mob" name="mobile" required pattern="[0-9]{10}">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <label for="username">Enter your insta username</label>
+                <input type="text" class="form-control" placeholder="Enter here" id="username" name="username" required>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="sel1">Number of followers on Instagram</label>
+                    <select class="form-control" id="sel1" name="followers">
+                        <option value="1k-5k">1k-5k</option>
+                        <option value="5k-10k">5k-10k</option>
+                        <option value="10k-20k">10k-20k</option>
+                        <option value="20k-50k">20k-50k</option>
+                        <option value=">50k">>50k</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div>
+            <label for="category">Campaigns you would like to prefer</label>
+            <select class="form-control" placeholder="Select" id="category" name="category"
+                onchange='CheckCategory(this.value);'>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Makeup">Makeup</option>
+                <option value="Artist">Artist</option>
+                <option value="Mom">Mom</option>
+                <option value="Blogger">Blogger</option>
+                <option value="Travel">Travel</option>
+                <option value="Food">Food</option>
+                <option value="Others">Others</option>
+
+            </select>
+
+
+        </div>
+        <p></p>
+
+        <div style="display: none;" id="Others">
+            <label for="other">Mention Category</label>
+            <input type="text" class="form-control" id="other" name="others">
+        </div>
+
+
+        <!-- <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label> -->
+        <br>
+        <div style="width: 200px;margin:auto"><button type="submit" class="button" style="width: 100%;"
+                value="influencer" name="user" formaction="final">Submit</button></div>
+
+</form>
+</div>
+
+<br>
+<br>
+<br>
+
+{%else%}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="fname">First Name:</label>
+            <input type="text" class="form-control" placeholder="Enter First Name" id="fname" name="Fname">
+        </div>
+        <div class="col-lg-6">
+            <label for="lname">Last Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" name="Lname">
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" placeholder="Enter Email" id="email" name="Email">
+        </div>
+        <div class="col-lg-6">
+            <label for="mob">Mobile No:</label>
+            <input type="tel" class="form-control" placeholder="Enter Number" id="mob" name="Mobile" pattern="[0-9]{10}">
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-lg-12">
+            <label for="company">Enter your Company Name /Brand Name</label>
+            <input type="text" class="form-control" placeholder="Enter here" id="company" name="Brand">
+        </div>
+    </div>
+    <p></p>
+    <br>
+    <div style="width: 200px;margin:auto"><button type="submit" class="button" style="width: 100%;" value="brand"
+            name="user" formaction="final">Submit</button></div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+{%endif%}
+
+</form>
+
+
+<script type="text/javascript">
+
+    function CheckCategory(val) {
+        var element = document.getElementById('Others');
+        if (val == 'Others')
+            element.style.display = 'block';
+        else
+            element.style.display = 'none';
+    }
+</script>
+
+{%endblock%}

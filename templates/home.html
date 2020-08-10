@@ -1,0 +1,161 @@
+
+{%extends 'index.html'%}
+{%load static%}
+
+
+
+{%block content%}
+
+{%for x in messages%}
+
+
+<div class="border border-danger badge-success font-italic">{{x}}</div>
+<br>
+
+
+
+
+{%endfor%}
+<form>
+  
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-5 mb-md-0 yo2 ">
+                    <img src="{%static 'images/w.png'%}" >
+                </div>
+                <div class="col-md-6 align-self-center text-center text-md-left">
+                    <div class="block">
+                        <h1 class="font-weight-bold mb-4 font-size-60">Belive in Yourself, Make the change</h1>
+                        <p class="mb-4" style="font-size: large;">i2B is a platform to connect brands with Instagram influencers to run result-oriented product campaigns.</p>
+                        <a class="btn btn-main" style="background-color:#fff952;" href="#section">Get
+                            Started</a>
+                    </div>
+                </div>
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+ 
+        
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+
+        <div class="container">
+            
+            <div class="ele">
+                <h2 class="font-weight-bold mb-4">Who We</h2>
+            </div>
+    
+        <div class="yo">
+            <img src="{% static 'images/bridge.png'%}">
+        </div>    
+    </div>
+
+<br>
+<br>
+   
+
+        <div class="container">
+                <h2 class="mb-3 mt-3 font-weight-bold" style="text-align: center;">Do you have an engaging Social Media audience<br> You are at the right place!</h2>
+            <br>
+
+           <div class="yo1" >
+               <img src="{%static 'images/worth.png'%}" >
+            </div>
+    
+            <br>
+
+        <div class="row">
+
+            <div class="col-lg-6" style="text-align: center;">
+               
+                    <h4>Social Media Power.</h4>
+                    <p>bla bla</p>
+                   
+                </div>
+         
+        
+
+        <div class="col-lg-6" style="text-align: center;"> 
+          
+                <h4>Money Benifit.</h4>
+                <p>bla bla</p>
+        
+     
+        </div>
+
+        
+        </div>
+        
+        </div>
+   
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="container">
+        <div class="ele">
+            <h1 h1 class="font-weight-bold mb-4 font-size-60">The Brands who took a shot on us</h1>
+        </div>
+        <div class="customer-logos slider">
+            <div class="slide"><img src="{% static 'images/c1.png'%}"></div>
+            <div class="slide"><img src="{% static 'images/c2.JPG'%}"></div>
+            <div class="slide"><img src="{% static 'images/c3.png'%}"></div>
+            <div class="slide"><img src="{% static 'images/c1.png'%}"></div>
+            <div class="slide"><img src="{% static 'images/c2.JPG'%}"></div>
+            <div class="slide"><img src="{% static 'images/c3.png'%}"></div>
+            <div class="slide"><img src="{% static 'images/c1.png'%}"></div>
+            <div class="slide"><img src="{% static 'images/c3.png'%}"></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+  
+    
+        
+            <h2 style="text-align: center;" >Join Us</h2>
+            <br>
+            <br>
+         
+      
+    <section id="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center mb-5 mb-lg-0">
+                    <button class="button" value="influencer" formaction="result" name="person">I am an Influencer</button>
+                </div>
+                <div class="col-md-6 align-self-center text-center ">
+                    <button class="button" value="brand" formaction="result" name="person">I am a Brand</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+</form>
+
+
+{%endblock%}

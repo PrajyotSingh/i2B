@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/mystyle.css'%}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+
+    <style>
+        * {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px;
+            color: #3b4045;
+        }
+
+        .btn-main {
+            border-radius: 30px;
+            font-size: 18px;
+            padding: 15px 40px;
+            background-color: #f9a743;
+            box-shadow: 0 15px 40px rgba(249, 167, 68, 0.5);
+        }
+
+        .ele {
+            text-align: center;
+            color: #777777;
+            padding-bottom: 70px;
+        }
+
+        .slide img:hover {
+
+            transform: scale(1.2, 1.2);
+        }
+        .slide img{
+            width: 60%;
+        }
+
+        header .navbar {
+            position: sticky;
+            top: 0;
+        }
+
+        .ico {
+            display: flex;
+            position: absolute;
+            width: 100%;
+
+        }
+
+
+        .ico a {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 65px;
+            font-size: 30px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid black;
+
+
+        }
+
+        .ico a .icon {
+            position: relative;
+            color: #262626;
+            transition: .5s;
+            z-index: 3;
+        }
+
+        .ico a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+
+        .ico a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+
+        .ico a:hover:before {
+            top: 0;
+        }
+
+        .ico:nth-child(1) a:before {
+            background: #f00;
+        }
+
+        .ico:nth-child(2) a:before {
+            background: #dbd424
+        }
+
+        .ico:nth-child(3) a:before {
+            background: #f00;
+        }
+
+        .button {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: black;
+            background-color: #fff952;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #dbd424
+        }
+
+        .button:active {
+            background-color: white;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .yo{
+            width:700px;
+            margin:auto;
+        }
+        .yo img{
+            width: 100%;
+        }
+        .yo2{
+            width:700px;
+            margin:auto;
+        }
+        .yo2 img{
+            width: 100%;
+        }
+
+        .yo1{
+            width:500px;
+            margin:auto;
+        }
+        .yo1 img{
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+          }
+    
+          @media screen and (max-width: 700px){
+
+                 
+            .yo {
+                 width:400px;
+             }
+             .yo1{
+                width:400px;
+          
+            }
+            .yo2{
+                width:300px;
+            }
+
+            .slide img{
+                width: 100%;
+            }
+
+             
+         }
+
+    </style>
+
+</head>
+
+<body>
+   
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+                <a class="navbar-brand" href="/"><img src="{%static 'images/i2B.png'%}" style="width:200px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center text-lg-left">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="/">ABOUT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="#footer">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- /navigation -->
+
+    {%block content%}
+
+    {%endblock%}
+
+  
+
+    <footer id="footer">
+        <div style="margin:auto;width:300px;height: 100px;">
+            <img src="{%static 'images/contact.png'%}" style="width: 100%;">
+        </div>
+        <div class="ico" style="margin:auto; width:250px;position:relative;">
+
+            <a href="#">
+                <i class="fab fa-facebook-f icon" style='font-size:30px'></i> </a>
+
+            <a href="#"><i class="fab fa-instagram icon" style='font-size:30px'></i></a>
+
+            <a href="#"><i class="fab fa-linkedin-in icon" style='font-size:30px'></i></a>
+        </div>
+        <br>
+
+
+        <span style="text-align: center;">
+            <h3>+91-74 1952 1952</h3>
+        </span>
+
+
+
+    </footer>
+
+
+
+
+    <script src="{%static 'js/jquery-3.5.1.min.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="{%static 'js/myjs.js'%}"></script>
+
+
+</body>
+
+</html>
