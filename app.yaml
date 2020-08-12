@@ -18,8 +18,8 @@ handlers:
 # This configures Google App Engine to serve the files in the app's static
 # directory.
 - url: /
-  static_files: templates/index.html
-  upload: templates/index.html
+  static_files: templates/home.html
+  upload: templates/home.html
 
 # This handler routes all requests not caught above to your main app. It is
 # required when static routes are defined, but can be omitted (along with
